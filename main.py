@@ -1,6 +1,8 @@
 import torch
 import matplotlib.pyplot as plt
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 def sierpinski_triangle(size):
     # Create a 2D grid of coordinates
     x = torch.arange(size).view(-1, 1) # column vector
